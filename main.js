@@ -1,5 +1,11 @@
-function greeting() {
-  console.log("Hello World!");
-}
+const registerDialog = document.getElementById('registerDialog');
+const openRegisterDialog = document.getElementById('openRegisterDialog');
+const closeRegisterDialog = document.getElementById('closeRegisterDialog');
 
-greeting();
+openRegisterDialog.addEventListener('click', () => {
+  registerDialog.showModal();
+});
+
+closeRegisterDialog.addEventListener('click', () => {
+  registerDialog.close();
+});
