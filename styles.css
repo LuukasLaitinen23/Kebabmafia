@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #4ba2d1;
-    background-image: url("backgroundimg.jpg");
+    background-image: url("/img/backgroundimg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 70px;
   }
-  
+
   .navbar {
     position: fixed;
     background-color: #393636;
@@ -23,23 +23,23 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .navbar ul {
     margin: 0;
     padding: 15px;
   }
-  
+
   .navbar li {
     display: inline;
     padding: 14px 20px;
   }
-  
+
   .navbar a {
     color: white;
     text-decoration: none;
     padding: 20px;
   }
-  
+
   .navbar a:hover {
     background-color: #575757;
     border-radius: 4px;
@@ -48,7 +48,7 @@ body {
   .navbar a:active {
     background-color: black;
   }
-  
+
   .about-section {
     background-color: #fff;
     padding: 30px;
@@ -58,25 +58,25 @@ body {
     box-sizing: border-box;
     margin-top: 50px;
   }
-  
+
   .about-content {
     overflow: hidden;
   }
-  
+
   .nav-header {
     color: #fff;
     float: left;
     margin-left: 30px;
     margin-top: 15px;
   }
-  
+
   .about-header {
     text-align: left;
     font-size: large;
     color: #575757;
     width: 100%;
   }
-  
+
   .about-text {
     float: left;
     width: 40%;
@@ -85,7 +85,7 @@ body {
     line-height: 1.6;
     font-size: large;
   }
-  
+
   .logo-img {
     position: absolute;
     top: 50%;
@@ -94,7 +94,7 @@ body {
     width: 150px;
     height: 150px;
   }
-  
+
   .footer {
     background-color: #575757;
     color: white;
@@ -102,7 +102,7 @@ body {
     width: 100%;
     bottom: 0;
   }
-  
+
   .footer-text {
     margin: 0;
   }
@@ -112,4 +112,3 @@ body {
   border: none;
 }
 
-  
