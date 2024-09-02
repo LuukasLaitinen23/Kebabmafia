@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Kebab Mafia</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script src="main.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <h1 class="nav-header">Kebab Mafia</h1>
-            <ul>
-                <li><a>Etusivu</a></li>
-                <li><a>Menu</a></li>
-                <li><a>Yhteystiedot</a></li>
-                <li><button id="openRegisterDialog"><i class="fas fa-user-plus"></i></button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <h1 class="nav-header">Kebab Mafia</h1>
+        <ul>
+          <li><a>Etusivu</a></li>
+          <li><a>Menu</a></li>
+          <li><a>Yhteystiedot</a></li>
+          <li>
+            <button id="openRegisterDialog">
+              <i class="fas fa-user-plus registerIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <section class="about-section">
-        <div class="about-content">
-            <h2 class="about-header">Lisää meistä</h2>
-            <p class="about-text">Tervetuloa syömään maailman vaarallisimmat kebabit! Me tarjoamme ainutlaatuisen ja unohtumattoman kokemuksen, jota muistelet vielä kuolinvuoteellasi. Tulet varmasti jäämään koukkuun meidän itse tehtyyn kebabiin sekä talonkastikkeeseen. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci enim atque commodi magni nihil aut, eaque eveniet debitis numquam dolores. Maxime aliquid quaerat quam facere cum totam, a fugit.</p>
-            <img src="img/logo.jpg" alt="logo" class="logo-img">
-        </div>
-
+      <div class="about-content">
+        <h2 class="about-header">Lisää meistä</h2>
+        <p class="about-text">
+          Tervetuloa syömään maailman vaarallisimmat kebabit! Me tarjoamme
+          ainutlaatuisen ja unohtumattoman kokemuksen, jota muistelet vielä
+          kuolinvuoteellasi. Tulet varmasti jäämään koukkuun meidän itse tehtyyn
+          kebabiin sekä talonkastikkeeseen. <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          adipisci enim atque commodi magni nihil aut, eaque eveniet debitis
+          numquam dolores. Maxime aliquid quaerat quam facere cum totam, a
+          fugit.
+        </p>
+        <img src="img/logo.jpg" alt="logo" class="logo-img" />
+      </div>
     </section>
 
     <dialog id="registerDialog">
+      <form action="">
         <h2>Register account</h2>
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username">
+
+        <label for="username">Username, minimum 3 letters:</label>
+        <input type="text" name="username" id="username" minlength="4" required/>
+
+        <label for="email">Email (@metropolia.fi):</label>
+        <input type="email" name="email" id="email" pattern=".+@metropolia\.fi" required/>
+
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-        <button id="submit">Submit</button>
-        <button id="closeRegisterDialog">Close</button>
+        <input type="password" name="password" id="password" pattern="(?=.*[A-Z])(?=.*\d).{1,}" required/>
+
+        <div>
+          <input type="submit" value="Submit" />
+
+          <button id="closeRegisterDialog">Close</button>
+        </div>
+      </form>
     </dialog>
 
     <footer class="footer">
       <p class="footer-text">&copy; 2024 Kebab Mafia</p>
     </footer>
-
-</body>
+  </body>
 </html>
